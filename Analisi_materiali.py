@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from Sciame_EM import Sciame
 import argparse
 
-parser = argparse.ArgumentParser(description="Simulazione di sciami elettromagnetici")
+parser = argparse.ArgumentParser(description="Simulazione di sciami elettromagnetici nei materiali")
 parser.add_argument("n", type=int, help="Numero di campioni (energie)")
 parser.add_argument("b", type=int, help="Ordine di grandezza energia massima (10^b)")
 parser.add_argument("s", type=float, help="Passo della simulazione")
@@ -18,7 +18,6 @@ materiali = {
     "Ice": {"dE": 1.822, "X0": 39.31, "Ec": [78.60, 76.50], "color": "blue"},
     "Concrete": {"dE": 3.935, "X0": 11.55, "Ec": [49.90, 48.50], "color": "gray"}
 }
-
 
 risultati = {}
 for nome in materiali:
@@ -69,7 +68,7 @@ axes[1].set_ylabel("Energia [MeV]")
 
 for ax in axes:
     ax.set_xlabel("Energia primaria [MeV]")
-    ax.set_xscale('log') # Impostato log visto che usi logspace
+    ax.set_xscale('log') 
     ax.grid(True, linestyle='--', alpha=0.5)
     ax.legend()
 
