@@ -14,7 +14,7 @@ parser.add_argument("n", type=int, help="Numero di sciami da simulare")
 parser.add_argument("X0", type=float, help="Lunghezza di radiazione [cm]")
 args = parser.parse_args()
     
-print(f"Avvio simulazione di {args.n} sciami...")
+print(f"Avvio simulazione di {args.n} sciami")
 
 sciami = []
 E_totali = []
@@ -52,13 +52,12 @@ E_err = np.std(E_matrice, axis=0) / np.sqrt(args.n)
 N_err = np.std(N_matrice, axis=0) / np.sqrt(args.n)
 
 E_media = np.mean(np.array(E_totali))
-Ec_media = (args.Ece + args.Ecp) / 2
 fig, axes = plt.subplots(1, 2, figsize=(14,5)) 
 fig.suptitle(f"Simulazione di {args.n} sciami", fontsize=16)
 
 axes[0].errorbar(distanza, N_medie, yerr=N_err, color='blue', alpha=0.7)
 axes[0].grid(True, linestyle='--', alpha=0.5)
-axes[0].set_title("Sviluppo longitudinale", fontsize=14)
+axes[0].set_title("Numero di particelle", fontsize=14)
 axes[0].set_xlabel("Distanza [cm]", fontsize=12)
 axes[0].set_ylabel("Numero medio di particelle", fontsize=12)
 
@@ -67,7 +66,7 @@ axes[1].errorbar(distanza, E_medie, yerr=E_err, color='red', alpha=0.7)
 axes[1].grid(True, linestyle='--', alpha=0.5)
 axes[1].set_title("Deposito di energia per ionizzazione", fontsize=14)
 axes[1].set_xlabel("Distanza [cm]", fontsize=12)
-axes[1].set_ylabel("Energia [MeV]", fontsize=12)
+axes[1].set_ylabel("Energia depositata [MeV]", fontsize=12)
 testo_box = (f"Energia Iniziale ($E_0$): {args.E0} MeV\n" f"Energia Totale Depositata: {E_media:.1f} MeV\n")
 axes[1].text(0.95, 0.95, testo_box, transform=axes[1].transAxes, verticalalignment='top', horizontalalignment='right', fontsize=10, bbox=dict(boxstyle='round', facecolor='white', alpha=0.8))
 
