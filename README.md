@@ -29,7 +29,8 @@ Il progetto è diviso in moduli:
     L'utente deve inserire i seguenti input:
     
       * Numero di campioni di energia 
-      * Ordine di grandezza dell'energia massima 
+      * Ordine di grandezza dell'energia massima
+      * Moltiplicatore energia massima 
       * Passo della simulazione 
       * Numero di ripetizioni statistiche 
       * Segno della particella iniziale 
