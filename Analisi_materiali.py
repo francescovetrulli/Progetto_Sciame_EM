@@ -57,7 +57,7 @@ for nome, dati in materiali.items():
     axes[0].errorbar(energie, np.array(res["t"]) * args.s * X0, yerr=np.array(res["t_err"]) * args.s * X0, color=dati["color"], label=nome, marker='o', alpha=0.7)
     axes[1].errorbar(energie, res["E"], yerr=res["E_err"], color=dati["color"], label=nome, marker='o', alpha=0.7)
 
-axes[0].set_title("Distanza massima dello sciame", fontsize=14)
+axes[0].set_title("Sviluppo longitudinale", fontsize=14)
 axes[0].set_ylabel("Distanza [cm]")
 axes[1].set_title("Energia depositata dallo sciame", fontsize=14)
 axes[1].set_ylabel("Energia depositata [MeV]")
