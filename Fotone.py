@@ -5,8 +5,11 @@ class Fotone:
 		Crea un fotone.
 
 		Parametri:
+		
 			energia(float) : Energia del fotone
+			
 		Returns:
+		
 			None
 		'''
 		
@@ -18,14 +21,19 @@ class Fotone:
 		del fotone.
 
 		Parametri:
+		
 			sciame(list): Particelle presenti nello sciame
+			
 			dE(float): Perdita per ionizzazione in una lunghezza di 
 			radiazione [Mev]
+			
 			s(float): Passo della simulazione
+			
 		Returns:
-			None (aggiorna la lista delle particelle presenti, 
+		
+			None: Aggiorna la lista delle particelle presenti, 
 			aggiungendo una coppia elettrone positrone 
-			con metà dell'energia iniziale)
+			con metà dell'energia iniziale
 		'''
 		
 		from Particella import Particella
