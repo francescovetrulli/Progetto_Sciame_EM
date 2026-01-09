@@ -33,7 +33,7 @@ VARIABILI:
 	
 	materiali (dict): Parametri fisici dei mezzi (dE, X0, Ec) e colore per i grafici
 	
-	risultati (dict): Contenitore strutturato dei risultati medi e dei relativi errori:
+	risultati (dict): Risultati medi e relativi errori sulla media:
 	
 		"d", "d_err" (list): Distanza finale media di stop [cm]
 		
