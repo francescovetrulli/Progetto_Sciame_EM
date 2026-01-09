@@ -7,7 +7,7 @@ Il progetto è diviso in moduli:
   * Sciame.py 
 
   ## Test del codice  
-  * test.py
+  * Test_statistico.py
     
     Contiene il codice per eseguire una simulazione generica. L'utente deve inserire i seguenti input:
     
@@ -20,10 +20,10 @@ Il progetto è diviso in moduli:
       * Numero di sciami da simulare 
       * Lunghezza di radiazione 
         
-    Il codice produce due grafici, sul numero di particelle e sull'energia depositata in funzione della distanza percorsa dallo sciame
+    Il codice produce tre grafici, sul numero di particelle per tipo e sull'energia depositata (per step e cumulativa) in funzione della distanza percorsa dallo sciame.
 
   ## Studio dei vari materiali  
-  * Analisi_materiali.py
+  * Studio_materiali.py
     
     Contiene il codice per eseguire una simulazione in alcuni materiali. Quelli utilizzati sono ghiaccio e cemento ma altri possono essere facilmente aggiunti.
     L'utente deve inserire i seguenti input:
@@ -35,6 +35,10 @@ Il progetto è diviso in moduli:
       * Numero di ripetizioni statistiche 
       * Segno della particella iniziale 
         
-    Il codice produce due grafici, sulla distanza percorsa e sull'energia depositata in funzione dell'energia primaria.
+    Il codice produce 4 pannelli di grafici:
+      * Caratteristiche totali medie degli sciami (Distanza di arresto e energia depositata)
+      * Composizone media degli sciami
+      * Caratteristiche totali medie degli sciami nel loro picco (Distanza di arresto e energia depositata)
+      * Composizone media degli sciami nel loro picco
 
 
